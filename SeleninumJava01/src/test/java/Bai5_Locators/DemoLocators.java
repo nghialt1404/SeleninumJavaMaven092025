@@ -31,7 +31,7 @@ public class DemoLocators {
 
 
         driver.findElement(By.tagName("button")).click();  // Cách này ít dùng
-        driver.findElement(By.className("btn-primary")).click(); // Cách này ít dùng
+        //driver.findElement(By.className("btn-primary")).click(); // Cách này ít dùng
 
 
         Thread.sleep(2000);
