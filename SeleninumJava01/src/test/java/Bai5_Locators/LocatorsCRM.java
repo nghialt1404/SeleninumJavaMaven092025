@@ -31,7 +31,9 @@ public class LocatorsCRM {
     public static String buttonContacts = "//a[normalize-space()='Contacts' and contains(@href,'all_contacts')]";
     public static String headerCustomerPage = "//span[normalize-space()='Customers Summary']";
 
-    public static String inputSearchCustomer = "//div[@id='clients_filter']/descendant::input[@type='search']";
+    public static String inputSearchCustomer = "//div[@id='clients_filter']/descendant::input";
+    public static String fristRowItemCustomer = "//table[@id='clients']//tbody/tr[1]/td[3]/a";
+
 
     // Locators for  New Customers Page
 
@@ -39,9 +41,10 @@ public class LocatorsCRM {
     public static String inputVatNumber = "//input[@id='vat']";
     public static String inputphone = "//input[@id='phonenumber']";
     public static String inputWebsite = "//input[@id='website']";
-    public static String inputAddress = "//input[@id='address']";
+    public static String inputAddress = "//textarea[@id='address']";
+    public static String inputState = "//input[@id='state']";
     public static String inputCity = "//input[@id='city']";
-    public static String inputZipcode = "//input[@id='']";
+    public static String inputZipcode = "//input[@id='zip']";
 
 
     public static String dropdownGroup = "//button[contains(@data-id,'groups_in')]";
@@ -51,6 +54,7 @@ public class LocatorsCRM {
     public static String inputSearchCurrency = "//button[contains(@data-id , 'default_currency')]/following-sibling::div//input[@type='search']";
 
     public static String dropdownDefaultLanguage = "//button[contains(@data-id , 'default_language')]";
+    public static String optionLanguageDynamic = "//span[normalize-space()='%s']"; //%s giá trị String, %d giá trị số
 
     public static String dropdownCountry = "//button[contains(@data-id,'country')]";
     public static String inputSearchCountry = "//button[contains(@data-id , 'country')]/following-sibling::div//input[@type='search']";
@@ -84,6 +88,11 @@ public class LocatorsCRM {
     public static String inputDealine = "//input[@id='deadline']";
 
     public static String checkboxSendProject = "//label[@for='send_created_email']";
-    public static String buttonSaveProject = "//button[@data-form='#project_form' and normalize-space()='Save']";
+    public static String buttonSaveProject = "//div[@id='profile-save-section']//button[normalize-space()='Save']";
+
+    public static String selectxpathLanguage(String language) {
+        String xpathLanguage = "//span[normalize-space()='" + language + "']";
+        return xpathLanguage;
+    }
 
 }
